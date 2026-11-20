@@ -9,5 +9,8 @@ public class main {
         System.out.println("Input a description for the item.");
         String description = scanner.nextLine();
         System.out.println("Description: " + description);
+        System.out.println("Input a price for the item.");
+        double price = scanner.nextDouble();
+        System.out.println("Price: " + price);
     }
 }
