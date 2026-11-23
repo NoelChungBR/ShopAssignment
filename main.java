@@ -15,6 +15,9 @@ public class main {
                 this.description = description;
             }
         }
+        new Item("Apple", 15, 0.99, "Red gala apple");
+        new Item("Banana", 25, 0.59, "Yellow, ripe banana");
+        new Item("Orange", 20, 1.49, "Sweet orange");
         Scanner scanner = new Scanner(System.in);
         System.out.println("What would you like to do? (Edit stock of items: input 1, Edit price of items: input 2, View items: input 3, Delete an item: input 4)");
         int choice = scanner.nextInt();
