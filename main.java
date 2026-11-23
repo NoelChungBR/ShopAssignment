@@ -43,20 +43,21 @@ public class main {
         Item apple = new Item("Apple", 10, 0.99, "A juicy red apple.");
         Item banana = new Item("Banana", 20, 0.59, "A ripe yellow banana.");
         Item orange = new Item("Orange", 15, 0.79, "A sweet... orange orange.");
+        
+        int choice = 0;
+        while (choice != 5) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What would you like to do? (Edit stock of items: input 1, Edit price of items: input 2, View items: input 3, Delete an item: input 4)");
-        int choice = scanner.nextInt();
+        System.out.println("What would you like to do? (Edit stock of items: input 1, Edit price of items: input 2, View items: input 3, Delete an item: input 4, Exit: input 5)");
+        choice = scanner.nextInt();
         scanner.nextLine(); 
-
-        switch (choice) {
-            case 1:
-            System.out.println("Which item would you like to edit the stock of? (Apple: input 1, Banana: input 2, Orange: input 3)");
+            switch (choice) {
+                case 1:
+                    System.out.println("Which item would you like to edit the stock of? (Apple: input 1, Banana: input 2, Orange: input 3)");
             int itemChoice = scanner.nextInt();
             scanner.nextLine();
             switch (itemChoice) {
                 case 1:
                     System.out.println("Editing stock of Apple...");
-                
                     // Edit stock of Apple
                     break;
                 case 2:
@@ -75,13 +76,20 @@ public class main {
             break;
             case 3:
                 // View items
+
                 break;
             case 4:
                 // Delete an item
                 break;
+            case 5:
+                // Exit
+                System.out.println("Exiting...");
+                break;
             default:
                 // Happens if an invalid number is entered
                 System.out.println("Invalid choice.");
+                break;
+            }
         }
     }
 }
