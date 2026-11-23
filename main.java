@@ -38,11 +38,13 @@ public class main {
         }
         public void setDescription(String description) {
             this.description = description;
+        // used to get and set the name, stock, price, and description of an item
         }
     }
         Item apple = new Item("Apple", 10, 0.99, "A juicy red apple.");
         Item banana = new Item("Banana", 20, 0.59, "A ripe yellow banana.");
         Item orange = new Item("Orange", 15, 0.79, "A sweet... orange orange.");
+        // sets the items to be used in the inventory
         
         int choice = 0;
         while (choice != 5) {
@@ -57,32 +59,80 @@ public class main {
             scanner.nextLine();
             switch (itemChoice) {
                 case 1:
-                    System.out.println("Editing stock of Apple...");
-                    // Edit stock of Apple
+                    System.out.println("What would you like to set the stock of Apple to?");
+                    int newStock = scanner.nextInt();
+                    apple.setStock(newStock);
+                    System.out.println("Stock of Apple: " + apple.getStock());
+                    // asks for new stock of apple and sets it to the new stock
                     break;
                 case 2:
-                    System.out.println("Editing stock of Banana...");
-                    // Edit stock of Banana
+                    System.out.println("What would you like to set the stock of Banana to?");
+                    int newStockBanana = scanner.nextInt();
+                    banana.setStock(newStockBanana);
+                    System.out.println("Stock of Banana: " + banana.getStock());
+                    // does the same for banana
                     break;
                 case 3:
-                    System.out.println("Editing stock of Orange...");
-                    // Edit stock of Orange
+                    System.out.println("What would you like to set the stock of Orange to?");
+                    int newStockOrange = scanner.nextInt();
+                    orange.setStock(newStockOrange);
+                    System.out.println("Stock of Orange: " + orange.getStock());
+                    // and again for orange
                     break;
             }
-            // Edit stock of items
             break;
             case 2:
-            // Edit price of items
+                System.out.println("Which item would you like to edit the price of? (Apple: input 1, Banana: input 2, Orange: input 3)");
+            int itemChoicePrice = scanner.nextInt();
+            scanner.nextLine();
+            switch (itemChoicePrice) {
+                case 1:
+                    System.out.println("What would you like to set the price of Apple to?");
+                    double newPrice = scanner.nextDouble();
+                    apple.setPrice(newPrice);
+                    System.out.println("Price of Apple: " + apple.getPrice());
+                    // asks for new price of apple and sets it to the new price
+                    break;
+                case 2:
+                    System.out.println("What would you like to set the price of Banana to?");
+                    double newPriceBanana = scanner.nextDouble();
+                    banana.setPrice(newPriceBanana);
+                    System.out.println("Price of Banana: " + banana.getPrice());
+                    // does the same for banana
+                    break;
+                case 3:
+                    System.out.println("What would you like to set the price of Orange to?");
+                    double newPriceOrange = scanner.nextDouble();
+                    orange.setPrice(newPriceOrange);
+                    System.out.println("Price of Orange: " + orange.getPrice());
+                    // and yet again for orange
+                    break;
+            }
             break;
             case 3:
                 // View items
-
                 break;
             case 4:
-                // Delete an item
+                System.out.println("Which item would you like to delete? (Apple: input 1, Banana: input 2, Orange: input 3)");
+            int itemChoiceDelete = scanner.nextInt();
+            scanner.nextLine();
+            switch (itemChoiceDelete) {
+                case 1:
+                    apple.setStock(0);
+                    System.out.println("Apple deleted.");
+                    break;
+                case 2:
+                    banana.setStock(0);
+                    System.out.println("Banana deleted.");
+                    break;
+                case 3:
+                    orange.setStock(0);
+                    System.out.println("Orange deleted.");
+                    break;
+            }
                 break;
             case 5:
-                // Exit
+                // Exits the program and loop
                 System.out.println("Exiting...");
                 break;
             default:
