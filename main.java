@@ -3,17 +3,26 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input an item.");
-        String item = scanner.nextLine();
-        System.out.println("Item: " + item);
-        System.out.println("Input a description for the item.");
-        String description = scanner.nextLine();
-        System.out.println("Description: " + description);
-        System.out.println("Input a quantity for the item.");
-        int quantity = scanner.nextInt();
-        System.out.println("Quantity: " + quantity);
-        System.out.println("Input a price for the item.");
-        double price = scanner.nextDouble();
-        System.out.println("Price: " + price);
+        System.out.println("What would you like to do? (Edit stock of items: input 1, Edit price of items: input 2, View items: input 3, Delete an item: input 4)");
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Checks next input
+
+        switch (choice) {
+            case 1:
+                // Edit stock of items
+                break;
+            case 2:
+                // Edit price of items
+                break;
+            case 3:
+                // View items
+                break;
+            case 4:
+                // Delete an item
+                break;
+            default:
+                // Happens if an invalid number is entered
+                System.out.println("Invalid choice.");
+        }
     }
 }
