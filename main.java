@@ -110,7 +110,22 @@ public class main {
             }
             break;
             case 3:
-                // View items
+                System.out.println("Items in the shop:");
+                if (apple.getStock() == 0) {
+                    System.out.println("Apple: Has been deleted. Add stock to add it back.");
+                } else {
+                    System.out.println("Apple: " + apple.getStock() + " apples costing $" + apple.getPrice() + " - " + apple.getDescription());
+                }
+                if (banana.getStock() == 0) {
+                    System.out.println("Banana: Has been deleted. Add stock to add it back.");
+                } else {
+                    System.out.println("Banana: " + banana.getStock() + " bananas costing $" + banana.getPrice() + " - " + banana.getDescription());
+                }
+                if (orange.getStock() == 0) {
+                    System.out.println("Orange: Has been deleted. Add stock to add it back.");
+                } else {
+                    System.out.println("Orange: " + orange.getStock() + " oranges costing $" + orange.getPrice() + " - " + orange.getDescription());
+                }
                 break;
             case 4:
                 System.out.println("Which item would you like to delete? (Apple: input 1, Banana: input 2, Orange: input 3)");
@@ -132,11 +147,11 @@ public class main {
             }
                 break;
             case 5:
-                // Exits the program and loop
+                // exits the program and loop
                 System.out.println("Exiting...");
                 break;
             default:
-                // Happens if an invalid number is entered
+                // happens if an invalid number is entered
                 System.out.println("Invalid choice.");
                 break;
             }
